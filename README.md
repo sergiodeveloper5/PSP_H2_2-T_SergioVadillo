@@ -12,11 +12,11 @@ Este proyecto consiste en una aplicación distribuida cliente-servidor que facil
 
 - Primero ejecutamos:
 
-Servidor.java: (Debería salir)
+Servidor.java: (Debería funcionar,sino vamos al siguiente guión(-))
 
 Servidor iniciado en el puerto 12345
 
-Y después Cliente.java: (Debería salir)
+Y después Cliente.java: (Debería funcioonar,sino vamos al siguiente guión(-))
 
 Conectado al servidor en localhost:12345
 Ingrese clave de búsqueda (o 'salir' para terminar):
@@ -33,7 +33,7 @@ Error al iniciar el servidor: Address already in use: bind
 Entonces tenemos que abrir cmd y ejecutar:
 netstat -ano | findstr :12345
 
-Esto te mostrará qué proceso está ocupando el puerto 55555. Deberías ver algo como:
+Esto te mostrará qué proceso está ocupando el puerto 12345. Deberías ver algo como:
 TCP    0.0.0.0:12345      0.0.0.0:0           LISTENING    12345
 
 El último número (12345 en este ejemplo) es el PID (Process ID) del proceso que está ocupando el puerto.
@@ -48,6 +48,6 @@ En Servidor.java:
 private static final int PUERTO = 55555; // Cambia a un puerto disponible.
 
 En Cliente.java:
-private static final int PUERTO = 55666; // Cambia a coincidir con el servidor.
+private static final int PUERTO = 55555; // Cambia para coincidir con el puerto del servidor.
 
 Después de todo esto , el progrmaa se puede ejecutar sin problemas con las indicaciones que hay  al principio del documento.
