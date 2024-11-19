@@ -4,7 +4,10 @@ import java.io.*;
 import java.net.*;
 import java.util.concurrent.*;
 
-// Clase que implementa un servidor para buscar información en un archivo utilizando claves que envían los clientes.
+/**
+ * Clase principal para iniciar el servidor.
+ * Permite atender múltiples clientes simultáneamente.
+ */
 public class Servidor {
     private static final int PUERTO = 12345; // Puerto en el que el servidor estará a la espera de conexiones.
 
@@ -29,7 +32,12 @@ public class Servidor {
         }
     }
     
-    // Atiende las solicitudes de un cliente que está conectado.
+    /**
+     * Atiende las peticiones de un cliente.
+     * 
+     * @param cliente      Socket del cliente.
+     * @param accesoDatos  Instancia para acceso a los datos.
+     */
     private static void atenderCliente(Socket cliente, AccesoaDatos accesoDatos) {
         try (
             BufferedReader entrada = new BufferedReader(new InputStreamReader(cliente.getInputStream()));

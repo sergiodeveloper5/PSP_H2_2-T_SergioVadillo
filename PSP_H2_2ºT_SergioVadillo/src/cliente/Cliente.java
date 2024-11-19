@@ -3,7 +3,9 @@ package cliente;
 import java.io.*;
 import java.net.*;
 
-// Clase cliente que se conecta al servidor para buscar información.
+/**
+ * Clase principal para conectar y enviar solicitudes al servidor.
+ */
 public class Cliente {
     private static final String HOST = "localhost"; // Dirección del servidor.
     private static final int PUERTO = 12345; // Puerto del servidor.
